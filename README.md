@@ -1,6 +1,6 @@
 # UI Experiments
 
-Personal collection of trying out small things.
+Personal collection of trying out small things. [Demo](https://jzillmann.github.io/ui-experiments/)
 
 ## Build Commands
 
