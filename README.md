@@ -9,6 +9,8 @@ Personal collection of trying out small things. [Demo](https://jzillmann.github.
 -   `npm run build` builds a static copy of the app under `build/`
 -   `npm run deploy` builds a static copy of your app to `docs/`
 
+## Project Setup History
+
 -   `npx create-snowpack-app ui-experiments --template snowpack-svelte-ts-tw`
     -   Adaptions:
         -   PNPM: —use-pnpm
