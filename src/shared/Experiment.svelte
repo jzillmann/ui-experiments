@@ -16,8 +16,8 @@
 
 <div class="flex items-center justify-center">
     <div class="text-2xl font-bold">{title}</div>
-    <span bind:this={openDesciptionElement} on:click={toogleOpen} class="ml-1 cursor-pointer">
-        <SvgIcon {...clipboard} extraClass={openDescription ? 'text-gray-600' : ''} />
+    <span bind:this={openDesciptionElement} on:click={toogleOpen} class="ml-1 cursor-pointer" class:openDescription>
+        <SvgIcon {...clipboard} />
     </span>
 </div>
 
@@ -30,7 +30,7 @@
 <slot name="content" />
 
 <style>
-    .open {
-        @apply text-blue-600;
+    .openDescription {
+        @apply text-indigo-200;
     }
 </style>

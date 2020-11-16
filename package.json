@@ -1,8 +1,14 @@
 {
+    "name": "ui-experiments",
+    "version": "0.1.0",
+    "description": "UI Experiments",
+    "license": "Apache-2.0",
+
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "ts-check": "svelte-check"
+    "ts-check": "svelte-check",
+    "deploy": "rm -r build/* &&npm run build  && cp -r build/* docs/"
   },
   "dependencies": {
     "svelte": "^3.24.0"
