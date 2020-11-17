@@ -17,7 +17,8 @@ module.exports = {
         /* ... */
     },
     buildOptions: {
-        /* ... */
+        baseUrl: '/ui-experiments/',
+        webModulesUrl: 'modules',
     },
     proxy: {
         /* ... */
