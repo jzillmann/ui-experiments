@@ -15,7 +15,7 @@ import {
 	transition_in,
 	transition_out,
 	update_slot
-} from "../../web_modules/svelte/internal.js";
+} from "../../modules/svelte/internal.js";
 
 const get_or_slot_changes = dirty => ({});
 const get_or_slot_context = ctx => ({});

@@ -29,9 +29,9 @@ import {
 	transition_in,
 	transition_out,
 	update_slot
-} from "../../web_modules/svelte/internal.js";
+} from "../../modules/svelte/internal.js";
 
-import { blur } from "../../web_modules/svelte/transition.js";
+import { blur } from "../../modules/svelte/transition.js";
 import SvgIcon from "../svg/SvgIcon.js";
 import { clipboard } from "../svg/svgs.js";
 const get_content_slot_changes = dirty => ({});

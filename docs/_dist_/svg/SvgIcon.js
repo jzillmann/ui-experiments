@@ -8,7 +8,7 @@ import {
 	noop,
 	safe_not_equal,
 	svg_element
-} from "../../web_modules/svelte/internal.js";
+} from "../../modules/svelte/internal.js";
 
 function create_if_block(ctx) {
 	let path;

@@ -17,7 +17,7 @@ import {
 	text,
 	transition_in,
 	transition_out
-} from "../../web_modules/svelte/internal.js";
+} from "../../modules/svelte/internal.js";
 
 import Experiment from "../shared/Experiment.js";
 import Button from "./Button.js";

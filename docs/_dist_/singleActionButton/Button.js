@@ -20,7 +20,7 @@ import {
 	toggle_class,
 	transition_in,
 	transition_out
-} from "../../web_modules/svelte/internal.js";
+} from "../../modules/svelte/internal.js";
 
 import SvgIcon from "../svg/SvgIcon.js";
 
