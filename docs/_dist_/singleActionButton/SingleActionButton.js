@@ -49,7 +49,7 @@ function create_description_slot(ctx) {
 	};
 }
 
-// (64:20) <span slot="either">
+// (68:20) <span slot="either">
 function create_either_slot_1(ctx) {
 	let span;
 	let button;
@@ -58,7 +58,7 @@ function create_either_slot_1(ctx) {
 	button = new Button({
 			props: {
 				name: "Refresh",
-				svgSpec: { ...refresh, size: 5 },
+				svgSpec: { ...refresh, size: "w-5" },
 				pressed: /*pressed*/ ctx[0],
 				extraClass: "bg-teal-600"
 			}
@@ -98,7 +98,7 @@ function create_either_slot_1(ctx) {
 	};
 }
 
-// (72:20) <span slot="or">
+// (76:20) <span slot="or">
 function create_or_slot_1(ctx) {
 	let span;
 	let button;
@@ -107,7 +107,7 @@ function create_or_slot_1(ctx) {
 	button = new Button({
 			props: {
 				name: "Save",
-				svgSpec: { ...save, size: 5 },
+				svgSpec: { ...save, size: "w-5" },
 				pressed: /*pressed*/ ctx[0],
 				extraClass: "bg-green-600"
 			}
@@ -147,7 +147,7 @@ function create_or_slot_1(ctx) {
 	};
 }
 
-// (63:16) <EitherOr either={!changed}>
+// (67:16) <EitherOr either={!changed}>
 function create_default_slot_2(ctx) {
 	let t;
 	let current;
@@ -168,7 +168,7 @@ function create_default_slot_2(ctx) {
 	};
 }
 
-// (88:20) <span slot="either">
+// (92:20) <span slot="either">
 function create_either_slot(ctx) {
 	let span;
 	let button;
@@ -177,7 +177,7 @@ function create_either_slot(ctx) {
 	button = new Button({
 			props: {
 				name: "Refresh",
-				svgSpec: { ...refresh, size: 5 },
+				svgSpec: { ...refresh, size: "w-5" },
 				pressed: /*pressed*/ ctx[0],
 				extraClass: "bg-teal-600"
 			}
@@ -217,7 +217,7 @@ function create_either_slot(ctx) {
 	};
 }
 
-// (96:20) <span slot="or">
+// (100:20) <span slot="or">
 function create_or_slot(ctx) {
 	let span;
 	let button;
@@ -226,7 +226,7 @@ function create_or_slot(ctx) {
 	button = new Button({
 			props: {
 				name: "Save",
-				svgSpec: { ...save, size: 5 },
+				svgSpec: { ...save, size: "w-5" },
 				pressed: /*pressed*/ ctx[0],
 				extraClass: "bg-green-600"
 			}
@@ -266,7 +266,7 @@ function create_or_slot(ctx) {
 	};
 }
 
-// (87:16) <EitherOr either={!changed}>
+// (91:16) <EitherOr either={!changed}>
 function create_default_slot_1(ctx) {
 	let t;
 	let current;
@@ -356,7 +356,7 @@ function create_content_slot(ctx) {
 	button2 = new Button({
 			props: {
 				name: "UnPressed",
-				svgSpec: { ...refresh, size: 5 },
+				svgSpec: { ...refresh, size: "w-5" },
 				pressed: false,
 				extraClass: "bg-yellow-600"
 			}
@@ -365,7 +365,7 @@ function create_content_slot(ctx) {
 	button3 = new Button({
 			props: {
 				name: "Pressed",
-				svgSpec: { ...refresh, size: 5 },
+				svgSpec: { ...refresh, size: "w-5" },
 				pressed: true,
 				extraClass: "bg-yellow-600"
 			}
@@ -374,7 +374,7 @@ function create_content_slot(ctx) {
 	button4 = new Button({
 			props: {
 				name: "UnPressed",
-				svgSpec: { ...save, size: 5 },
+				svgSpec: { ...save, size: "w-5" },
 				pressed: false,
 				extraClass: "bg-blue-600"
 			}
@@ -383,7 +383,7 @@ function create_content_slot(ctx) {
 	button5 = new Button({
 			props: {
 				name: "Pressed",
-				svgSpec: { ...save, size: 5 },
+				svgSpec: { ...save, size: "w-5" },
 				pressed: true,
 				extraClass: "bg-blue-600"
 			}

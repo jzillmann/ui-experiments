@@ -44,7 +44,7 @@ function create_fragment(ctx) {
 		c() {
 			svg = svg_element("svg");
 			if (if_block) if_block.c();
-			attr(svg, "class", svg_class_value = "relative inline-block stroke-current w-" + /*size*/ ctx[2] + " h-" + /*size*/ ctx[2] + " " + /*extraClass*/ ctx[4] + " " + /*animation*/ ctx[3]);
+			attr(svg, "class", svg_class_value = "relative inline-block stroke-current " + /*size*/ ctx[2] + " " + /*extraClass*/ ctx[4] + " " + /*animation*/ ctx[3]);
 			attr(svg, "viewBox", "0 0 24 24");
 			attr(svg, "fill", /*fill*/ ctx[0]);
 			attr(svg, "xmlns", "http://www.w3.org/2000/svg");
@@ -67,7 +67,7 @@ function create_fragment(ctx) {
 				if_block = null;
 			}
 
-			if (dirty & /*size, extraClass, animation*/ 28 && svg_class_value !== (svg_class_value = "relative inline-block stroke-current w-" + /*size*/ ctx[2] + " h-" + /*size*/ ctx[2] + " " + /*extraClass*/ ctx[4] + " " + /*animation*/ ctx[3])) {
+			if (dirty & /*size, extraClass, animation*/ 28 && svg_class_value !== (svg_class_value = "relative inline-block stroke-current " + /*size*/ ctx[2] + " " + /*extraClass*/ ctx[4] + " " + /*animation*/ ctx[3])) {
 				attr(svg, "class", svg_class_value);
 			}
 
