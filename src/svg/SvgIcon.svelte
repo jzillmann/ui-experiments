@@ -1,13 +1,13 @@
 <script>
     export let fill = 'none';
     export let d: string;
-    export let size: number;
+    export let size: string;
     export let animation = '';
     export let extraClass = '';
 </script>
 
 <svg
-    class="relative inline-block stroke-current w-{size} h-{size} {extraClass} {animation}"
+    class="relative inline-block stroke-current {size} {extraClass} {animation}"
     viewBox="0 0 24 24"
     {fill}
     xmlns="http://www.w3.org/2000/svg">

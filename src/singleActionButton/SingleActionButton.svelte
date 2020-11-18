@@ -46,18 +46,22 @@
                 <div class="mt-4 text-sm tracking-tighter">
                     <Button
                         name="UnPressed"
-                        svgSpec={{ ...refresh, size: 5 }}
+                        svgSpec={{ ...refresh, size: 'w-5' }}
                         pressed={false}
                         extraClass="bg-yellow-600" />
                     <Button
                         name="Pressed"
-                        svgSpec={{ ...refresh, size: 5 }}
+                        svgSpec={{ ...refresh, size: 'w-5' }}
                         pressed={true}
                         extraClass="bg-yellow-600" />
                 </div>
                 <div class="mt-4 text-sm tracking-tighter">
-                    <Button name="UnPressed" svgSpec={{ ...save, size: 5 }} pressed={false} extraClass="bg-blue-600" />
-                    <Button name="Pressed" svgSpec={{ ...save, size: 5 }} pressed={true} extraClass="bg-blue-600" />
+                    <Button
+                        name="UnPressed"
+                        svgSpec={{ ...save, size: 'w-5' }}
+                        pressed={false}
+                        extraClass="bg-blue-600" />
+                    <Button name="Pressed" svgSpec={{ ...save, size: 'w-5' }} pressed={true} extraClass="bg-blue-600" />
                 </div>
             </div>
 
@@ -67,7 +71,7 @@
                     <span slot="either">
                         <Button
                             name="Refresh"
-                            svgSpec={{ ...refresh, size: 5 }}
+                            svgSpec={{ ...refresh, size: 'w-5' }}
                             {pressed}
                             on:click={handleClick}
                             extraClass="bg-teal-600" />
@@ -75,7 +79,7 @@
                     <span slot="or">
                         <Button
                             name="Save"
-                            svgSpec={{ ...save, size: 5 }}
+                            svgSpec={{ ...save, size: 'w-5' }}
                             {pressed}
                             on:click={handleClick}
                             extraClass="bg-green-600" />
@@ -91,7 +95,7 @@
                     <span slot="either">
                         <Button
                             name="Refresh"
-                            svgSpec={{ ...refresh, size: 5 }}
+                            svgSpec={{ ...refresh, size: 'w-5' }}
                             {pressed}
                             on:click={handleClick}
                             extraClass="bg-teal-600" />
@@ -99,7 +103,7 @@
                     <span slot="or">
                         <Button
                             name="Save"
-                            svgSpec={{ ...save, size: 5 }}
+                            svgSpec={{ ...save, size: 'w-5' }}
                             {pressed}
                             on:click={handleClick}
                             extraClass="bg-green-600" />
