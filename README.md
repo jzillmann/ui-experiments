@@ -16,6 +16,10 @@ Personal collection of trying out small things. [Demo](https://jzillmann.github.
         -   PNPM: —use-pnpm
         -   Official template: @snowpack/app-template-svelte-typescript
 -   Copy `.prettierrc` and `.prettierignore` to project
+-   Fix deployment to github pages:
+    -   Add empty `docs/.nojekyll` to fix gh pages deployment
+    -   Make links in index.html relative
+    -   [Fix other references by setting baseUrl and webModulesUrl](https://github.com/jzillmann/ui-experiments/commit/c8a05daf8f7b42264e999df8a4d1a6d42b1a58cc)
 
 See:
 
