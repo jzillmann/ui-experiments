@@ -3,7 +3,31 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
-    purge: ['./src/**/*.svelte'],
+    purge: {
+        content: ['./src/**/*.svelte'],
+        options: {
+            // These options are passed through directly to PurgeCSS
+            // Exclude smaller w/h because of current SVG mechanism.
+            whitelist: [
+                'w-1',
+                'w-2',
+                'w-3',
+                'w-4',
+                'w-5',
+                'w-6',
+                'w-8',
+                'w-10',
+                'h-1',
+                'h-2',
+                'h-3',
+                'h-4',
+                'h-5',
+                'h-6',
+                'h-8',
+                'h-10',
+            ],
+        },
+    },
     theme: {
         extend: {
             keyframes: {
