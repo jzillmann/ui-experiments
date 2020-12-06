@@ -8,6 +8,15 @@ module.exports = {
     },
     theme: {
         extend: {
+            width: {
+                9: '2.25rem',
+            },
+            height: {
+                9: '2.25rem',
+            },
+            borderWidth: {
+                3: '3px',
+            },
             keyframes: {
                 'spin-reverse': {
                     '0%': { transform: 'rotate(359deg)' },

@@ -1,11 +1,13 @@
 <script lang="typescript">
     import TailwindCss from './TailwindCSS.svelte';
     import SingleActionButton from './singleActionButton/SingleActionButton.svelte';
+    import StepProgressExperiment from './stepProgress/StepProgressExperiment.svelte';
 </script>
 
 <TailwindCss />
 
 <div class="container mx-auto">
+    <StepProgressExperiment />
     <SingleActionButton />
 </div>
 
