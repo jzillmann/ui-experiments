@@ -55,26 +55,28 @@
 
     <div slot="content" class="flex justify-center w-full">
         <div class="w-full">
-            <div class="flex items-center space-x-2 mb-4">
+            <div class="flex items-center space-x-2 mb-6">
                 <div class="">Number of steps: {numberOfSteps}</div>
                 <button class="px-1 w-4 bg-gray-400" on:click={() => setStepCount(numberOfSteps - 1)}>-</button>
                 <button class="px-1 w-4 bg-gray-400" on:click={() => setStepCount(numberOfSteps + 1)}>+</button>
-                {#if currentStep >= 0 && !complete}
-                    <div>Active Step:</div>
-                    <div class="flex whitespace-no-wrap">
-                        {#key currentStep}
-                            <div transition:slideX>{steps[currentStep]}</div>
-                        {/key}
-                    </div>
-                {/if}
             </div>
             <StepProgress stepCount={steps.length} activeStep={currentStep} {complete} activeColor="bg-blue-600" />
-            <div class="flex justify-center space-x-4 mt-4">
+            <div class="flex justify-center space-x-4 mt-12">
                 <button
                     class="py-1 px-3 bg-gray-400 rounded"
                     on:click={next}>{currentStep == steps.length - 1 ? 'Complete' : 'Next'}</button>
                 <button class="py-1 px-3 bg-gray-400 rounded" on:click={prev}>Prev</button>
                 <button class="py-1 px-3 bg-gray-400 rounded" on:click={cancel}>Cancel</button>
+            </div>
+            <div class="flex justify-center space-x-1 mt-10">
+                {#if currentStep >= 0 && !complete}
+                    <div transition:blur>Active Step:</div>
+                    <div class="flex whitespace-no-wrap w-32">
+                        {#key currentStep}
+                            <div transition:slideX>{steps[currentStep]}</div>
+                        {/key}
+                    </div>
+                {/if}
             </div>
         </div>
     </div>
