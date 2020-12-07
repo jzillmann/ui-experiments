@@ -1,6 +1,7 @@
 <script>
     import { blur } from 'svelte/transition';
-    import Experiment from '../shared/Experiment.svelte';
+    import slideX from './slideX';
+    import Showcase from '../gallery/Showcase.svelte';
     import StepProgress from './StepProgress.svelte';
 
     let numberOfSteps = 4;
@@ -32,7 +33,7 @@
     }
 </script>
 
-<Experiment title="Step Progress">
+<Showcase title="Step Progress">
     <div slot="description">
         <div class="grid grid-cols-2">
             <div class="flex justify-center">
@@ -60,9 +61,11 @@
                 <button class="px-1 w-4 bg-gray-400" on:click={() => setStepCount(numberOfSteps + 1)}>+</button>
                 {#if currentStep >= 0 && !complete}
                     <div>Active Step:</div>
-                    {#key currentStep}
-                        <div in:blur>{steps[currentStep]}</div>
-                    {/key}
+                    <div class="flex whitespace-no-wrap">
+                        {#key currentStep}
+                            <div transition:slideX>{steps[currentStep]}</div>
+                        {/key}
+                    </div>
                 {/if}
             </div>
             <StepProgress stepCount={steps.length} activeStep={currentStep} {complete} activeColor="bg-blue-600" />
@@ -75,4 +78,4 @@
             </div>
         </div>
     </div>
-</Experiment>
+</Showcase>

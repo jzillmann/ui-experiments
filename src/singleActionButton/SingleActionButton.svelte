@@ -1,5 +1,5 @@
 <script>
-    import Experiment from '../shared/Experiment.svelte';
+    import Showcase from '../gallery/Showcase.svelte';
     import Button from './Button.svelte';
     import EitherOr from './EitherOr.svelte';
     import { refresh, save } from '../svg/svgs';
@@ -16,7 +16,7 @@
     }
 </script>
 
-<Experiment title="Single Action Button">
+<Showcase title="Single Action Button">
     <div slot="description">
         <div class="font-bold">Challenge:</div>
         <div class="flex justify-center">
@@ -114,4 +114,4 @@
             </div>
         </div>
     </div>
-</Experiment>
+</Showcase>
