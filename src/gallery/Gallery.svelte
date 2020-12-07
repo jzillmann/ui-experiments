@@ -1,17 +1,13 @@
 <script>
-    import SingleActionButton from '../singleActionButton/SingleActionButton.svelte';
-    import StepProgressExperiment from '../stepProgress/StepProgressExperiment.svelte';
-    import { navigateTo } from './store';
-
-    const components = [SingleActionButton, StepProgressExperiment];
+    import { showcases, navigateTo } from './store';
 </script>
 
 <div class="grid grid-cols-3 gap-2">
-    {#each components as component}
+    {#each showcases as showcase}
         <div
-            class="showcase p-4 hover:bg-blue-400 cursor-pointer"
-            on:click|stopPropagation={() => navigateTo(component)}>
-            <svelte:component this={component} />
+            class="showcase p-4 hover:bg-blue-300 cursor-pointer"
+            on:click|stopPropagation={() => navigateTo(showcase.name)}>
+            <svelte:component this={showcase.component} />
         </div>
     {/each}
 </div>

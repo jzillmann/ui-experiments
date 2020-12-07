@@ -1,6 +1,6 @@
 <script lang="typescript">
     import TailwindCss from './TailwindCSS.svelte';
-    import { componentStore, navigateHome } from './gallery/store';
+    import { selectedComponent, navigateHome } from './gallery/store';
 </script>
 
 <TailwindCss />
@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="mt-16 container mx-auto">
-    <svelte:component this={$componentStore} />
+    <svelte:component this={$selectedComponent} />
 </div>
 
 <style>
