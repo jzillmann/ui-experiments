@@ -10,7 +10,7 @@
         Gallery
     </div>
 </div>
-<div class="mt-16 container mx-auto">
+<div class="mt-16 container mx-auto relative">
     <svelte:component this={$selectedComponent} />
 </div>
 

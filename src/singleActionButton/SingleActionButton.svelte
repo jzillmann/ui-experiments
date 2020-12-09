@@ -16,7 +16,7 @@
     }
 </script>
 
-<Showcase title="Single Action Button">
+<Showcase id="processingButton" title="Single Action Button">
     <div slot="description">
         <div class="font-bold">Challenge:</div>
         <div class="flex justify-center">

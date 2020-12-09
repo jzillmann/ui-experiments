@@ -33,7 +33,7 @@
     }
 </script>
 
-<Showcase title="Step Progress">
+<Showcase id="stepProgress" title="Step Progress">
     <div slot="description">
         <div class="grid grid-cols-2">
             <div class="flex justify-center">

@@ -4,9 +4,7 @@
 
 <div class="grid grid-cols-3 gap-2">
     {#each showcases as showcase}
-        <div
-            class="showcase p-4 hover:bg-blue-300 cursor-pointer"
-            on:click|stopPropagation={() => navigateTo(showcase.name)}>
+        <div class="showcase hover:bg-blue-300 cursor-pointer" on:click|stopPropagation={() => navigateTo(showcase.id)}>
             <svelte:component this={showcase.component} />
         </div>
     {/each}
@@ -18,6 +16,6 @@
         transform: scale(0.8);
     }
     .showcase:hover {
-        transform: scale(1);
+        transform: scale(0.9);
     }
 </style>

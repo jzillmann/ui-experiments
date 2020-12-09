@@ -5,34 +5,34 @@ import SingleActionButton from '../singleActionButton/SingleActionButton.svelte'
 import StepProgressExperiment from '../stepProgress/StepProgressExperiment.svelte';
 
 interface ShowcaseDefinition {
-    name: string;
+    id: string;
     component: object;
     date: string;
 }
 
 export const showcases: ShowcaseDefinition[] = [
     {
-        name: 'processingButton',
-        component: SingleActionButton,
-        date: 'November 2020',
-    },
-    {
-        name: 'stepProgress',
+        id: 'stepProgress',
         component: StepProgressExperiment,
         date: 'December 2020',
+    },
+    {
+        id: 'processingButton',
+        component: SingleActionButton,
+        date: 'November 2020',
     },
 ];
 
 const home = 'gallery';
-let initalComponentName: string = getParameterByName('showcase') || home;
-window.history.replaceState(initalComponentName, null, `?showcase=${initalComponentName}`);
+let initalComponentId: string = getParameterByName('showcase') || home;
+window.history.replaceState(initalComponentId, null, `?showcase=${initalComponentId}`);
 
-const selectedComponentName = writable<string>(initalComponentName);
-export const selectedComponent = derived(selectedComponentName, (name) => {
-    if (name === home) {
+const selectedComponentId = writable<string>(initalComponentId);
+export const selectedComponent = derived(selectedComponentId, (id) => {
+    if (id === home) {
         return Gallery;
     }
-    const showcase = showcases.find((s) => s.name === name);
+    const showcase = showcases.find((s) => s.id === id);
     if (showcase) {
         return showcase.component;
     }
@@ -41,18 +41,18 @@ export const selectedComponent = derived(selectedComponentName, (name) => {
 
 window.onpopstate = function (event: PopStateEvent) {
     if (event.state) {
-        selectedComponentName.set(event.state);
+        selectedComponentId.set(event.state);
     }
 };
 
-export function navigateTo(showcaseName: string) {
-    window.history.pushState(showcaseName, null, `?showcase=${showcaseName}`);
-    selectedComponentName.set(showcaseName);
+export function navigateTo(showcaseId: string) {
+    window.history.pushState(showcaseId, null, `?showcase=${showcaseId}`);
+    selectedComponentId.set(showcaseId);
 }
 
 export function navigateHome() {
     window.history.pushState(home, null, `/`);
-    selectedComponentName.set(home);
+    selectedComponentId.set(home);
 }
 
 function getParameterByName(name: string): string {

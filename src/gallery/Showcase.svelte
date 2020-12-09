@@ -1,9 +1,11 @@
 <script>
     import { blur } from 'svelte/transition';
+    import { receive, send } from './crossfade';
 
     import SvgIcon from '../svg/SvgIcon.svelte';
     import { clipboard } from '../svg/svgs';
 
+    export let id: string;
     export let title: string;
 
     let openDescription = false;
@@ -14,7 +16,7 @@
     }
 </script>
 
-<div>
+<div in:receive={{ key: id }} out:send={{ key: id }} class="absolute w-full">
     <div class="mb-10">
         <div class="flex items-center justify-center">
             <div class="text-2xl font-bold">{title}</div>
